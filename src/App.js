@@ -8,8 +8,11 @@ import { updateHeader } from "./redux/slice/headers";
 import { sorting } from "./utils/sortingUtils";
 import "./styles/app.css";
 import Board from "./components/containers/Board";
+import AppBar from "./components/containers/AppBar";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
-function App() {
+function App({ setGrp, setStatus, setPriority, setUser, grp }) {
   // Dispatch
   const dispatch = useDispatch();
 
@@ -142,7 +145,39 @@ function App() {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        {/* <NavBar /> */}
+        <AppBar />
+        <div className="App__filter">
+        <div className="filter__title">Display Settings &#8811;</div>
+        <Dropdown
+          options={["Status", "User", "Priority"]}
+          value={"Status"}
+          placeholder="Grouping"
+          className="App_filter_dropdown"
+          onChange={(e) => {
+            setStatus(false);
+            setPriority(false);
+            setUser(false);
+            if (e.value === "Status") {
+              setStatus(true);
+            }
+            if (e.value === "User") {
+              setUser(true);
+            }
+            if (e.value === "Priority") {
+              setPriority(true);
+            }
+          }}
+        />
+        <Dropdown
+          options={["Priority", "Title"]}
+          placeholder="Ordering"
+          value={"Priority"}
+          className="App_filter_dropdown"
+          onChange={() => {
+            setGrp(!grp);
+          }}
+        />
+      </div>
         <div className="app_outer">
           <div className="app_boards">
             {headers.map((header, index) => (
