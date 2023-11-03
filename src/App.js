@@ -6,6 +6,8 @@ import { DefineUsers } from "./redux/slice/users";
 import { updateContent } from "./redux/slice/data";
 import { updateHeader } from "./redux/slice/headers";
 import { sorting } from "./utils/sortingUtils";
+import "./styles/app.css";
+import Board from "./components/containers/Board";
 
 function App() {
   // Dispatch
@@ -140,7 +142,20 @@ function App() {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        Hii!!
+        {/* <NavBar /> */}
+        <div className="app_outer">
+          <div className="app_boards">
+            {headers.map((header, index) => (
+              <Board
+                status={status}
+                user={user}
+                header={header}
+                index={index}
+                content={content}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </DragDropContext>
   );

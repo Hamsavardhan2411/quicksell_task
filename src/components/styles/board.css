@@ -1,0 +1,48 @@
+.board {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    word-wrap: break-word;
+    background-clip:content-box ;
+    border-radius: 0.35rem;
+    height: 100%;
+    max-height: 82vh;
+    color: #000;
+  }
+  .board__cards {
+    padding: 0.5rem 0.5rem;
+    overflow-y: auto;
+  }
+  .board__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 0.5rem;
+    margin-bottom: 0;
+   
+  }
+ 
+  .board__top > div > p {
+    font-weight: bolder;
+  }
+  .total__cards {
+    font-size: 12px;
+    border-radius: 15px 15px 15px 15px;
+    padding-inline: 0.6rem;
+    border: 0.5px solid #a6d2b1;
+    background-color: #a6d2b1;
+    margin-inline: 10px;
+  }
+  .board__number{
+    margin-left: 0.5rem;
+    font-weight: 500;
+    color: gray;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
