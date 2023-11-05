@@ -14,7 +14,6 @@ export const headerSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { updateHeader } = headerSlice.actions;
 
 export default headerSlice.reducer;

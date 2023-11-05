@@ -14,7 +14,6 @@ export const contentSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { updateContent } = contentSlice.actions;
 
 export default contentSlice.reducer;

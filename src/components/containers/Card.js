@@ -1,33 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import { Draggable } from "react-beautiful-dnd";
-// import { AvatarGenerator } from "random-avatar-generator";
 import "../styles/card.css";
-
-const Card = ({ index, ticket, status, user, idx }) => {
-  // const generator = new AvatarGenerator();
-  // const [imgUrl] = useState(generator.generateRandomAvatar(ticket.id));
+import { imagesList } from "../../assets/images";
+const Card = ({ index, ticket, finalIndex, users }) => {
   return (
-    <Draggable key={idx} draggableId={idx} index={index}>
+    <Draggable key={finalIndex} draggableId={finalIndex} index={index}>
       {(provided) => (
         <div
-          className="custom__card"
+          className="drag_card"
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
-          <div className="card__text">
+          <div className="card_content">
             <p>{ticket.id}</p>
-            <div className="card__avatar">
-              {/* <img className="card__img" src={imgUrl} alt="avatar" /> */}
+            <div className="card_avatars">
+              <img
+                className="card_avatar"
+                src={imagesList[ticket.userId[ticket.userId.length - 1] - 1]}
+                alt="avatar"
+                title={users[ticket.userId[ticket.userId.length - 1] - 1].name}
+              />
               <span
-                className="card__status"
-                style={{ background: Math.random() > 0.5 ? "#99CC00" : "gray" }}
+                className="card_status"
+                style={{
+                  background: users[ticket.userId[ticket.userId.length - 1] - 1]
+                    .available
+                    ? "#03cc00"
+                    : "#8a8a8a",
+                }}
               ></span>
             </div>
           </div>
-          <div className="card__title">{ticket.title}</div>
-          <div className="card__not">
-            <p className="card__noti">
+          <div className="card_title">{ticket.title}</div>
+          <div className="card_priority">
+            <p className="card_p_sign">
               {ticket.tag.length ? (
                 <span class="material-symbols-outlined">error</span>
               ) : (
@@ -35,8 +42,8 @@ const Card = ({ index, ticket, status, user, idx }) => {
               )}
             </p>
             {ticket.tag.map((tag, index) => (
-              <p className="card__tags" key={index}>
-                <span className="card__circle"></span>
+              <p className="card_tags" key={index}>
+                <span className="card_circle"></span>
                 {tag}
               </p>
             ))}

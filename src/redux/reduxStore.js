@@ -33,7 +33,7 @@ const reduxStore = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+        ignoredActions: [REHYDRATE, PAUSE,FLUSH, PURGE, PERSIST, REGISTER],
       },
     }),
 });

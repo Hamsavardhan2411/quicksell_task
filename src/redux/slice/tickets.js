@@ -15,7 +15,6 @@ export const ticketSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { DefineTickets } = ticketSlice.actions;
 
 export default ticketSlice.reducer;
