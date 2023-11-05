@@ -2,6 +2,7 @@ import React from "react";
 import { Draggable } from "react-beautiful-dnd";
 import "../styles/card.css";
 import { imagesList } from "../../assets/images";
+import { avatarList } from "./Board";
 const Card = ({ index, ticket, finalIndex, users }) => {
   return (
     <Draggable key={finalIndex} draggableId={finalIndex} index={index}>
@@ -35,11 +36,9 @@ const Card = ({ index, ticket, finalIndex, users }) => {
           <div className="card_title">{ticket.title}</div>
           <div className="card_priority">
             <p className="card_p_sign">
-              {ticket.tag.length ? (
-                <span class="material-symbols-outlined">error</span>
-              ) : (
-                ""
-              )}
+              <span class="material-symbols-outlined">
+                {avatarList[ticket.priority]}
+              </span>
             </p>
             {ticket.tag.map((tag, index) => (
               <p className="card_tags" key={index}>

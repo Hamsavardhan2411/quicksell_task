@@ -1,70 +1,47 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Task Master - The Quicksell Kanban Board
 
-## Available Scripts
+Task Master, the Quicksell Kanban Board, introduces an innovative approach to project and task management. With its powerful features and user-friendly interface, it becomes the preferred choice for efficiently visualizing and organizing your work. This application allows for versatile grouping of tasks by Status, User, or Priority, catering to your project's unique requirements. It also offers effortless sorting options based on Priority or Title to enhance productivity. Task Master provides a responsive and visually appealing experience on all your devices. Furthermore, it ensures the persistence of your grouping and sorting preferences, even after a page refresh. With the added convenience of drag-and-drop functionality powered by React-Beautiful-DND, reordering tasks becomes a breeze.
+## Get Started
 
-In the project directory, you can run:
+To embark on your journey with Task Master, follow these straightforward steps:
 
-### `yarn start`
+1. Clone the repository to your local machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Install the required dependencies using Yarn:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```
+   yarn
+   ```
 
-### `yarn test`
+3. Fire up the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```
+   yarn start
+   ```
 
-### `yarn build`
+4. Access the Kanban board application by opening your web browser and navigating to `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Use
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Check your assigned tasks by Name, Status and Priority 
+- Select your preferred sorting method between Priority and Title to explore more.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## The Technology Stack
 
-### `yarn eject`
+Task Master leverages a modern tech stack to deliver a smooth and enjoyable user experience:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **ReactJS**: Task Master's user interface is brought to life by React.
+- **React-Beautiful-DND**: Experience seamless task reordering thanks to this drag-and-drop functionality.
+- **CSS Magic**: Custom CSS styles are applied to create an engaging and visually appealing user interface.
+- **Redux**: Task Master's state management relies on the power of Redux.
+- **fetch**: For handling API requests and data retrieval.
+- **React Dropdown**: Enhance user interactions with an intuitive dropdown for selecting grouping options.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Meet the Creator
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The Quicksell Kanban Board is a creation of Hamsavardhan D(AE20B026), a 4th year UG student from IIT Madras.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Explore the application, elevate your task management, and transform the way you handle your projects with this exceptional Kanban board.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy Task Mastering!

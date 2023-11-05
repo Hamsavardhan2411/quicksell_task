@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../styles/board.css";
 import { Droppable } from "react-beautiful-dnd";
 import Card from "./Card";
-let avatarList = [
+export const avatarList = [
   "signal_cellular_null",
   "signal_cellular_1_bar",
   "signal_cellular_3_bar",
